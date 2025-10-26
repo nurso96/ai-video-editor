@@ -1,0 +1,70 @@
+--- a/setup_models.sh
++++ b/setup_models.sh
+@@ -114,44 +114,29 @@
+ # Test imports
+ echo ""
+ echo "Testing critical imports..."
+-python -c "
++python - <<'EOF'
+ import sys
++
+ errors = []
++packages = [
++    ('torch', 'torch'),
++    ('diffusers', 'diffusers'),
++    ('transformers', 'transformers'),
++    ('whisper', 'whisper'),
++    ('moviepy.editor', 'moviepy'),
++]
+
+-try:
+-    import torch
+-    print('✅ torch')
+-except ImportError as e:
+-    errors.append('torch')
+-    print(f'❌ torch: {e}')
+-
+-try:
+-    import diffusers
+-    print('✅ diffusers')
+-except ImportError as e:
+-    errors.append('diffusers')
+-    print(f'❌ diffusers: {e}')
+-
+-try:
+-    import transformers
+-    print('✅ transformers')
+-except ImportError as e:
+-    errors.append('transformers')
+-    print(f'❌ transformers: {e}')
+-
+-try:
+-    import whisper
+-    print('✅ whisper')
+-except ImportError as e:
+-    errors.append('whisper')
+-    print(f'❌ whisper: {e}')
+-
+-try:
+-    import moviepy.editor
+-    print('✅ moviepy')
+-except ImportError as e:
+-    errors.append('moviepy')
+-    print(f'❌ moviepy: {e}')
++for module_name, display_name in packages:
++    try:
++        __import__(module_name)
++        print(f'✅ {display_name}')
++    except ImportError as e:
++        errors.append(display_name)
++        print(f'❌ {display_name}: {e}')
+
+ if errors:
+-    print(f'\n⚠️  Missing packages: {', '.join(errors)}')
++    print(f'\n⚠️  Missing packages: {", ".join(errors)}')
+     print('Run: pip install -r requirements.txt')
+     sys.exit(1)
+-"
++EOF
+
+ # Summary

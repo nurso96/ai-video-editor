@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/nick/ai-video-editor/frontend/src/pages/index.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default function Home() {\n  return (\n    <main className=\"p-6\">\n      <h1 className=\"text-2xl font-bold mb-4\">AI Video Editor — Dev UI</h1>\n      <p className=\"mb-4\">Development playground: <Link href=\"/editor\" className=\"text-blue-500\">Open Editor</Link></p>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,qKAAC;QAAK,WAAU;;0BACd,qKAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,qKAAC;gBAAE,WAAU;;oBAAO;kCAAwB,qKAAC,qKAAI;wBAAC,MAAK;wBAAU,WAAU;kCAAgB;;;;;;;;;;;;;;;;;;AAGjG","debugId":null}}]
+}

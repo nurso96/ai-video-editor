@@ -1,0 +1,43 @@
+fastapi
+uvicorn
+sqlalchemy
+redis
+rq
+ffmpeg-python
+moviepy
+librosa
+pyyaml
+python-multipart
+python-dotenv
+pillow
+huggingface-hub
+soundfile
+transformers
+httpx
+pytest
+pytest-asyncio
+pydantic-settings
+
+# AI Model Dependencies (GPU-accelerated)
+torch
+torchvision
+torchaudio
+diffusers
+accelerate
+imageio
+imageio-ffmpeg
+safetensors
+openai-whisper
+
+# Optional: For better chat models
+sentencepiece
+protobuf
+
+# Multi-LLM Chat & Social Upload
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+requests
+tiktoken  # For OpenAI token counting
+anthropic  # For Claude API (optional)
+google-generativeai  # For Gemini API (optional)

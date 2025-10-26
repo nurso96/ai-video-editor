@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+redis-py
+rq
+ffmpeg-python
+moviepy
+librosa
+pyyaml
+python-multipart
+python-dotenv
+pydantic-settings
+pillow
+huggingface-hub

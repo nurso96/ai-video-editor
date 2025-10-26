@@ -1,0 +1,17 @@
+segments:
+  - name: HOOK
+    start: 0.0
+    end: 2.5
+    effects: [zoom, caption]
+  - name: BUILD
+    start: 2.5
+    end: 10.0
+    effects: [cut, caption]
+  - name: PUNCH
+    start: 10.0
+    end: 14.0
+    effects: [sfx:vine_boom, zoom, slowmo]
+  - name: OUTRO
+    start: 14.0
+    end: 15.0
+    effects: [fade_out, text:'subscribe for chaos']
