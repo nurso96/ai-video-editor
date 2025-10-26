@@ -2,3 +2,9 @@ node_modules/
 **/__pycache__/
 *.pyc
 .env
+.env.local
+.env.*.local
+
+# Old scripts with hardcoded tokens - DO NOT COMMIT
+fix_hf_token.sh
+fix_huggingface.sh
