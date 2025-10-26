@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 
 from backend.config import get_settings
 from backend.database import init_db
-from backend.routes import chat, consent, ingest, multi_chat, render, social, timeline, tools
+from backend.routes import auto_edit, chat, consent, ingest, multi_chat, render, social, timeline, tools
 from backend.schemas import APIMessage, HealthResponse
 from backend.workers.queue import queue_manager
 
@@ -30,6 +30,7 @@ app.include_router(ingest.router, prefix="/api")
 app.include_router(timeline.router, prefix="/api")
 app.include_router(multi_chat.router, prefix="/api/multi-chat", tags=["Multi-LLM Chat"])
 app.include_router(social.router, prefix="/api/social", tags=["Social Media Upload"])
+app.include_router(auto_edit.router, prefix="/api/auto-edit", tags=["Auto-Editing"])
 app.include_router(render.router, prefix="/api")
 app.include_router(consent.router, prefix="/api")
 app.include_router(chat.router, prefix="/api")
